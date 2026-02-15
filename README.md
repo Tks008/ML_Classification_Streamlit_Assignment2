@@ -5,7 +5,7 @@
 **Student ID:** 2025AB05283  
 **Date:** 15-FEB-2026
 
-**GitHub Repository:** https://github.com/Tks008/ML_Classification_Streamlit_Assignment  
+**GitHub Repository:** https://github.com/Tks008/ML_Classification_Streamlit_Assignment2 
 **Live Streamlit App:** [Your Streamlit Link - Fill after deployment]
 
 ---
