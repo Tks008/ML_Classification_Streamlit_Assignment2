@@ -434,8 +434,8 @@ All models showed good convergence:
 
 ## Links
 
-- **GitHub Repository:** https://github.com/Tks008/ML_Classification_Streamlit_Assignment
-- **Live Streamlit App:** [Fill in after deployment]
+- **GitHub Repository:** https://github.com/Tks008/ML_Classification_Streamlit_Assignment2
+- **Live Streamlit App:** https://mlclassificationappassignment2.streamlit.app/
 - **Dataset Source:** https://archive.ics.uci.edu/dataset/2/adult
 - **Documentation:** See notebook for detailed implementation
 
