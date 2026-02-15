@@ -212,7 +212,7 @@ with st.sidebar.expander("ℹ️ About This App"):
     **Dataset:** UCI Adult Income  
     48,842 samples | 14 features
     
-    **GitHub:** [Repository Link](https://github.com/Tks008/ML_Classification_Streamlit_Assignment)
+    **GitHub:** [Repository Link](https://github.com/Tks008/ML_Classification_Streamlit_Assignment2)
     """)
 
 # Main content
@@ -608,7 +608,7 @@ st.markdown("""
         Dataset: <a href='https://archive.ics.uci.edu/dataset/2/adult' target='_blank'>UCI Machine Learning Repository</a>
     </p>
     <p style='margin-top: 1rem; font-size: 0.9rem;'>
-        🔗 <a href='https://github.com/Tks008/ML_Classification_Streamlit_Assignment' target='_blank'>GitHub Repository</a>
+        🔗 <a href='https://github.com/Tks008/ML_Classification_Streamlit_Assignment2' target='_blank'>GitHub Repository</a>
     </p>
 </div>
 """, unsafe_allow_html=True)
