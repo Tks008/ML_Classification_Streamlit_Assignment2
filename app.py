@@ -178,22 +178,22 @@ st.sidebar.markdown("---")
 st.sidebar.subheader("📁 Upload Test Data")
 
 # Download sample data button
-st.sidebar.markdown("**Need sample data?**")
+st.sidebar.markdown("**Need test data?**")
 try:
     import os
     if os.path.exists('test_data.csv'):
         with open('test_data.csv', 'r') as f:
             sample_data = f.read()
         st.sidebar.download_button(
-            label="📥 Download Sample CSV",
+            label="📥 Download test CSV",
             data=sample_data,
-            file_name="sample_test_data.csv",
+            file_name="test_data.csv",
             mime="text/csv",
-            help="Download sample test data to try the app",
+            help="Download test data to try the app",
             use_container_width=True
         )
     else:
-        st.sidebar.info("💡 Sample test_data.csv not found. Upload your own CSV file below.")
+        st.sidebar.info("💡 Test_data.csv not found. Upload your own CSV file below.")
 except Exception as e:
     st.sidebar.info("💡 Upload your CSV file below to begin")
 
