@@ -176,6 +176,29 @@ st.sidebar.info(f"""
 # File upload section
 st.sidebar.markdown("---")
 st.sidebar.subheader("📁 Upload Test Data")
+
+# Download sample data button
+st.sidebar.markdown("**Need sample data?**")
+try:
+    import os
+    if os.path.exists('test_data.csv'):
+        with open('test_data.csv', 'r') as f:
+            sample_data = f.read()
+        st.sidebar.download_button(
+            label="📥 Download Sample CSV",
+            data=sample_data,
+            file_name="sample_test_data.csv",
+            mime="text/csv",
+            help="Download sample test data to try the app",
+            use_container_width=True
+        )
+    else:
+        st.sidebar.info("💡 Sample test_data.csv not found. Upload your own CSV file below.")
+except Exception as e:
+    st.sidebar.info("💡 Upload your CSV file below to begin")
+
+st.sidebar.markdown("---")
+
 uploaded_file = st.sidebar.file_uploader(
     "Upload CSV file",
     type=['csv'],
@@ -212,7 +235,7 @@ with st.sidebar.expander("ℹ️ About This App"):
     **Dataset:** UCI Adult Income  
     48,842 samples | 14 features
     
-    **GitHub:** [Repository Link](https://github.com/Tks008/ML_Classification_Streamlit_Assignment2)
+    **GitHub:** [Repository Link](https://github.com/Tks008/ML_Classification_Streamlit_Assignment)
     """)
 
 # Main content
@@ -535,6 +558,37 @@ else:
     # Instructions when no file uploaded
     st.info("👈 **Please upload a CSV file from the sidebar to begin predictions**")
     
+    # Sample data download section
+    st.markdown("---")
+    col1, col2, col3 = st.columns([1, 2, 1])
+    with col2:
+        st.markdown("### 📥 Quick Start")
+        st.markdown("**Don't have test data? Download our sample file:**")
+        
+        try:
+            import os
+            if os.path.exists('test_data.csv'):
+                with open('test_data.csv', 'r') as f:
+                    sample_data = f.read()
+                
+                st.download_button(
+                    label="⬇️ Download Sample Test Data (9,769 samples)",
+                    data=sample_data,
+                    file_name="sample_test_data.csv",
+                    mime="text/csv",
+                    help="Download sample Adult Income test data to try the app",
+                    use_container_width=True,
+                    type="primary"
+                )
+                
+                st.caption("✅ This sample file contains 9,769 test samples from the Adult Income dataset with all features encoded and ready to use.")
+            else:
+                st.info("Sample data will be available after deployment. For now, prepare your own CSV with the format shown below.")
+        except Exception as e:
+            st.info("💡 Prepare your CSV file with the format shown below")
+    
+    st.markdown("---")
+    
     # Two column layout for instructions
     col1, col2 = st.columns(2)
     
@@ -608,7 +662,7 @@ st.markdown("""
         Dataset: <a href='https://archive.ics.uci.edu/dataset/2/adult' target='_blank'>UCI Machine Learning Repository</a>
     </p>
     <p style='margin-top: 1rem; font-size: 0.9rem;'>
-        🔗 <a href='https://github.com/Tks008/ML_Classification_Streamlit_Assignment2' target='_blank'>GitHub Repository</a>
+        🔗 <a href='https://github.com/Tks008/ML_Classification_Streamlit_Assignment' target='_blank'>GitHub Repository</a>
     </p>
 </div>
 """, unsafe_allow_html=True)
