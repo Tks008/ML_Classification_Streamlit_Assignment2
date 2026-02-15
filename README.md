@@ -7,7 +7,7 @@
 
 **GitHub Repository:** https://github.com/Tks008/ML_Classification_Streamlit_Assignment2
 
-**Live Streamlit App:** [Your Streamlit Link - Fill after deployment]
+**Live Streamlit App:** https://mlclassificationappassignment2.streamlit.app/
 
 ---
 
